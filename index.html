@@ -118,14 +118,7 @@ footer{padding:27px 0;border-top:1px solid rgba(255,255,255,.07);color:#888;font
 <div class="warning"><strong>Risk notice:</strong> DAMICOIN is an early-stage project. This site is informational and is not financial advice or an offer to sell or solicitation to buy any asset. The prototype is not publicly tradable. Crypto-assets may be volatile and users may lose all funds. Proposed utility and roadmap items may never be implemented.</div>
 </div></section>
 </main>
-<footer><div class="wrap foot"><div class="footbrand"><img src="damicoin-front.png" alt=""><b>DAMICOIN</b><span>· DAMI</span></div><span>© <span id="year"></span> DAMICOIN Project · Prototype stage</span><a href="#top">Back to top ↑</a></div></footer>
-<script>
-const btn=document.getElementById('menu'), links=document.getElementById('navlinks');
-btn.addEventListener('click',()=>links.classList.toggle('open'));
-links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
-document.getElementById('year').textContent=new Date().getFullYear();
-</script>
-  <!-- DAMICOIN COMMUNITY SECTION -->
+    <!-- DAMICOIN COMMUNITY SECTION -->
 <section class="community-section" id="community">
     <div class="community-container">
 
@@ -164,6 +157,14 @@ document.getElementById('year').textContent=new Date().getFullYear();
 
     </div>
 </section>
+  
+<footer><div class="wrap foot"><div class="footbrand"><img src="damicoin-front.png" alt=""><b>DAMICOIN</b><span>· DAMI</span></div><span>© <span id="year"></span> DAMICOIN Project · Prototype stage</span><a href="#top">Back to top ↑</a></div></footer>
+<script>
+const btn=document.getElementById('menu'), links=document.getElementById('navlinks');
+btn.addEventListener('click',()=>links.classList.toggle('open'));
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
 
 <style>
 .community-section {
