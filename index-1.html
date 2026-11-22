@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080808">
+<meta name="description" content="DAMICOIN (DAMI) — an early-stage digital currency project exploring practical blockchain utility.">
+<title>DAMICOIN | Official Project Hub</title>
+<link rel="icon" href="assets/damicoin-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#070707;--surface:#101010;--surface2:#151515;--gold:#e4b541;--gold2:#ffdf85;--text:#f6f3ec;--muted:#aaa49a;--line:rgba(228,181,65,.22);--max:1160px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"DM Sans",sans-serif;line-height:1.65}a{color:inherit;text-decoration:none}button{font:inherit}.wrap{width:min(var(--max),92%);margin:auto}
+header{position:sticky;top:0;z-index:50;background:rgba(7,7,7,.88);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.07)}
+.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{display:flex;align-items:center;gap:11px;font-family:"Space Grotesk";font-weight:700;letter-spacing:.12em}.brand img{width:42px;height:42px;object-fit:cover;border-radius:50%}.navlinks{display:flex;gap:24px;color:#c7c2b8;font-size:14px}.navlinks a:hover{color:var(--gold2)}
+.btn{display:inline-flex;justify-content:center;align-items:center;padding:12px 19px;border-radius:999px;background:linear-gradient(135deg,#f5d47d,#c28a24);color:#171006;font-weight:700;font-size:14px;border:1px solid #efcb6c;transition:.2s}.btn:hover{transform:translateY(-2px);filter:brightness(1.06)}.outline{background:transparent;color:var(--gold2);border-color:var(--line)}.menu{display:none;background:transparent;color:var(--gold2);border:1px solid var(--line);padding:8px 11px;border-radius:10px}
+.hero{padding:86px 0 55px;position:relative;overflow:hidden}.hero:before{content:"";position:absolute;width:640px;height:640px;right:-220px;top:-170px;border-radius:50%;background:radial-gradient(circle,rgba(222,169,44,.16),transparent 67%);pointer-events:none}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:42px}.eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:.2em;font-size:12px;font-weight:700}.hero h1{font:700 clamp(40px,6.2vw,76px)/1.08 "Space Grotesk";letter-spacing:-.045em;margin:17px 0}.gold{color:var(--gold2)}.lead{font-size:18px;color:#c5c0b7;max-width:610px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:27px}.hero-logo{width:min(410px,90%);display:block;margin:auto;filter:drop-shadow(0 20px 45px rgba(226,174,47,.17));animation:float 5s ease-in-out infinite}@keyframes float{50%{transform:translateY(-9px)}}
+.status{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:999px;padding:7px 12px;color:#d7c28d;font-size:12px;margin-top:17px}.dot{width:8px;height:8px;border-radius:50%;background:#e6b846;box-shadow:0 0 10px #e6b846}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:27px}.metric{background:linear-gradient(145deg,#141414,#090909);border:1px solid var(--line);padding:19px;border-radius:15px}.metric strong{display:block;font:700 22px "Space Grotesk";color:var(--gold2)}.metric small{color:var(--muted)}
+section{padding:72px 0}.head{max-width:750px;margin-bottom:32px}.head h2{font:700 clamp(29px,4vw,44px)/1.15 "Space Grotesk";margin:10px 0}.head p{color:var(--muted);margin:0}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.card{border:1px solid rgba(255,255,255,.07);background:var(--surface);padding:24px;border-radius:18px}.symbol{display:grid;place-items:center;width:43px;height:43px;background:rgba(228,181,65,.1);color:var(--gold2);border-radius:12px;font-size:20px;margin-bottom:17px}.card h3{font:600 19px "Space Grotesk";margin:0 0 9px}.card p{margin:0;color:var(--muted);font-size:14px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:20px}.panel{border:1px solid var(--line);border-radius:18px;padding:25px;background:linear-gradient(150deg,#17130b,#0d0d0d)}.panel h3{font:600 23px "Space Grotesk";margin:0 0 12px}.panel p{color:var(--muted)}
+.table{overflow:hidden;border:1px solid rgba(255,255,255,.08);border-radius:17px;background:#101010}.row{display:flex;justify-content:space-between;gap:18px;padding:15px 18px;border-bottom:1px solid rgba(255,255,255,.06)}.row:last-child{border:0}.row span{color:var(--muted)}.row b{text-align:right;font-weight:600}
+.allocs{display:grid;grid-template-columns:1fr 1fr;gap:12px}.alloc{padding:17px;background:#111;border:1px solid rgba(255,255,255,.06);border-radius:14px}.allocline{display:flex;justify-content:space-between;gap:10px;margin-bottom:9px;font-size:14px}.allocline b{color:var(--gold2)}.bar{height:7px;border-radius:9px;background:#292929;overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,#b47b17,#ffe18a)}
+.roadmap{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.phase{padding:20px;border:1px solid var(--line);border-radius:16px;background:#101010}.phase .phase-tag{font-size:11px;color:var(--gold);letter-spacing:.13em;text-transform:uppercase}.phase h3{font:600 19px "Space Grotesk";margin:9px 0}.phase p{color:var(--muted);font-size:13px;margin:0}.phase .state{display:inline-block;margin-top:14px;font-size:11px;padding:4px 9px;border-radius:99px;background:#211b0c;color:#e6c46a;border:1px solid #4b3b17}
+.docs{display:flex;align-items:center;gap:20px;justify-content:space-between;padding:25px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(120deg,#15120b,#101010)}.docs h3{font:600 23px "Space Grotesk";margin:0 0 6px}.docs p{color:var(--muted);margin:0}
+details{border:1px solid rgba(255,255,255,.08);border-radius:14px;background:#101010;padding:17px 19px;margin:10px 0}summary{cursor:pointer;font-weight:600}details p{color:var(--muted);font-size:14px;margin-bottom:0}
+.warning{padding:16px 18px;border-left:3px solid var(--gold);background:#111;color:#aaa49a;font-size:12px;margin-top:24px}.warning strong{color:#d8bd79}
+footer{padding:27px 0;border-top:1px solid rgba(255,255,255,.07);color:#888;font-size:13px}.foot{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}.footbrand{display:flex;align-items:center;gap:9px}.footbrand img{width:28px;height:28px;border-radius:50%}
+@media(max-width:850px){.hero-grid{grid-template-columns:1fr;text-align:center}.lead{margin:auto}.actions{justify-content:center}.hero-logo{width:min(330px,75%)}.metrics{grid-template-columns:repeat(2,1fr)}.grid3{grid-template-columns:1fr}.split{grid-template-columns:1fr}.roadmap{grid-template-columns:repeat(2,1fr)}.docs{display:block}.docs .btn{margin-top:17px}}
+@media(max-width:600px){.navlinks{display:none;position:absolute;top:76px;left:0;right:0;background:#080808;padding:17px 4%;border-bottom:1px solid var(--line);flex-direction:column}.navlinks.open{display:flex}.menu{display:block}.nav>.btn{display:none}.hero{padding:58px 0 35px}section{padding:55px 0}.roadmap,.allocs{grid-template-columns:1fr}.row{padding:14px}.metric{padding:14px}.metric strong{font-size:19px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top"><img src="assets/damicoin-logo.png" alt="DAMICOIN emblem"><span>DAMICOIN</span></a>
+    <nav class="navlinks" id="navlinks"><a href="#vision">Vision</a><a href="#token">Token</a><a href="#tokenomics">Tokenomics</a><a href="#roadmap">Roadmap</a><a href="#docs">Whitepaper</a></nav>
+    <a class="btn outline" href="#docs">Read Whitepaper</a>
+    <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  </div>
+</header>
+<main id="top">
+<section class="hero">
+<div class="wrap hero-grid">
+<div>
+<div class="eyebrow">Digital currency project · Early stage</div>
+<h1>A borderless future.<br><span class="gold">Powered by DAMI.</span></h1>
+<p class="lead">DAMICOIN is an early-stage project exploring accessible digital payments, community participation, and practical blockchain utility—with transparent development and a security-first mindset.</p>
+<div class="actions"><a class="btn" href="#vision">Explore the project</a><a class="btn outline" href="docs/DAMICOIN_Whitepaper_v1.pdf" download>Download Whitepaper ↓</a></div>
+<div class="status"><span class="dot"></span> Prototype · Not launched on mainnet</div>
+</div>
+<div><img class="hero-logo" src="assets/damicoin-logo.png" alt="DAMICOIN gold coin emblem"></div>
+</div>
+<div class="wrap metrics">
+<div class="metric"><strong>DAMI</strong><small>Token symbol</small></div>
+<div class="metric"><strong>1 Billion</strong><small>Prototype supply</small></div>
+<div class="metric"><strong>18</strong><small>Decimals</small></div>
+<div class="metric"><strong>In progress</strong><small>Project stage</small></div>
+</div>
+</section>
+
+<section id="vision"><div class="wrap">
+<div class="head"><div class="eyebrow">Project direction</div><h2>Designed around clarity, utility, and trust.</h2><p>We intend to develop thoughtfully, publish what is real, and avoid hype. These are goals—not claims of existing adoption or functionality.</p></div>
+<div class="grid3">
+<article class="card"><div class="symbol">↔</div><h3>Digital transfers</h3><p>Explore low-friction wallet-to-wallet transfers on a supported network.</p></article>
+<article class="card"><div class="symbol">◇</div><h3>Community</h3><p>Create ways for people to learn about DAMICOIN, share feedback, and follow progress.</p></article>
+<article class="card"><div class="symbol">⌘</div><h3>Practical utility</h3><p>Research and prototype real applications that could use DAMI, if developed and validated.</p></article>
+</div>
+</div></section>
+
+<section id="token"><div class="wrap">
+<div class="head"><div class="eyebrow">Token overview</div><h2>DAMI at a glance.</h2><p>Current design targets. Mainnet deployment and final distribution are not complete.</p></div>
+<div class="split">
+<div class="table">
+<div class="row"><span>Token name</span><b>DAMICOIN</b></div><div class="row"><span>Symbol</span><b>DAMI</b></div><div class="row"><span>Target network</span><b>BNB Smart Chain</b></div><div class="row"><span>Standard</span><b>BEP-20</b></div><div class="row"><span>Supply target</span><b>1,000,000,000</b></div><div class="row"><span>Decimals</span><b>18</b></div><div class="row"><span>Transfer tax target</span><b>0%</b></div><div class="row"><span>Mainnet contract</span><b>Not deployed</b></div>
+</div>
+<div class="panel"><h3>Current technical status</h3><p>Our Solidity token prototype compiled and deployed in Remix VM, a local simulated blockchain. Basic token name, symbol, supply, and wallet balance reads were verified.</p><p>It has not yet been deployed to public testnet or mainnet and has not received an independent security audit.</p></div>
+</div>
+</div></section>
+
+<section id="tokenomics"><div class="wrap">
+<div class="head"><div class="eyebrow">Draft tokenomics</div><h2>Proposed allocation model.</h2><p>Illustrative only. These percentages are not finalized or distributed.</p></div>
+<div class="allocs">
+<div class="alloc"><div class="allocline"><span>Community & ecosystem</span><b>30% · 300M</b></div><div class="bar"><i style="width:30%"></i></div></div>
+<div class="alloc"><div class="allocline"><span>Treasury / reserve</span><b>20% · 200M</b></div><div class="bar"><i style="width:20%"></i></div></div>
+<div class="alloc"><div class="allocline"><span>Liquidity</span><b>15% · 150M</b></div><div class="bar"><i style="width:15%"></i></div></div>
+<div class="alloc"><div class="allocline"><span>Development</span><b>15% · 150M</b></div><div class="bar"><i style="width:15%"></i></div></div>
+<div class="alloc"><div class="allocline"><span>Founder</span><b>10% · 100M</b></div><div class="bar"><i style="width:10%"></i></div></div>
+<div class="alloc"><div class="allocline"><span>Marketing</span><b>10% · 100M</b></div><div class="bar"><i style="width:10%"></i></div></div>
+</div>
+</div></section>
+
+<section id="roadmap"><div class="wrap">
+<div class="head"><div class="eyebrow">Roadmap</div><h2>Milestones, not promises.</h2><p>We will update the status as we make verifiable progress. Timing may change.</p></div>
+<div class="roadmap">
+<article class="phase"><div class="phase-tag">Phase 01</div><h3>Foundation</h3><p>Project identity, contract prototype, compilation, local deployment, and basic checks.</p><span class="state">Prototype completed</span></article>
+<article class="phase"><div class="phase-tag">Phase 02</div><h3>Test & document</h3><p>Public testnet testing, documentation, brand assets, and security review.</p><span class="state">In progress</span></article>
+<article class="phase"><div class="phase-tag">Phase 03</div><h3>Launch readiness</h3><p>Compliance review, transparent distribution, key management, and deployment planning.</p><span class="state">Planned</span></article>
+<article class="phase"><div class="phase-tag">Phase 04</div><h3>Utility ecosystem</h3><p>Research and prototype payments, applications, merchant workflows, and integrations.</p><span class="state">Future exploration</span></article>
+</div>
+</div></section>
+
+<section id="docs"><div class="wrap">
+<div class="head"><div class="eyebrow">Documentation</div><h2>Read the project whitepaper.</h2><p>Version 1.0 documents the concept, current prototype, proposed tokenomics, potential utility, roadmap, and risks.</p></div>
+<div class="docs"><div><h3>DAMICOIN Whitepaper v1.0</h3><p>Preliminary draft · PDF · November 2026</p></div><a class="btn" href="docs/DAMICOIN_Whitepaper_v1.pdf" download>Download PDF ↓</a></div>
+</div></section>
+
+<section id="faq"><div class="wrap">
+<div class="head"><div class="eyebrow">Transparency</div><h2>Frequently asked questions.</h2></div>
+<details><summary>Can I buy DAMI right now?</summary><p>No. DAMICOIN is not publicly launched, and there is no official mainnet token contract or sale.</p></details>
+<details><summary>Is DAMICOIN on BNB Smart Chain?</summary><p>Not yet. The prototype was deployed in Remix VM, which is a simulation. Public testnet and mainnet deployments are future milestones.</p></details>
+<details><summary>Does DAMI guarantee profit or price growth?</summary><p>No. The project makes no promises about price, returns, liquidity, exchange listings, or future success.</p></details>
+<details><summary>What is the planned token supply?</summary><p>The current prototype uses a supply of 1 billion tokens with 18 decimals. The final public launch configuration and distribution plan remain subject to review.</p></details>
+<details><summary>How can I follow the project?</summary><p>Official channels are not yet published. We will add links only after accounts are established and controlled by the project. Be cautious of impersonators, unsolicited offers, and fake giveaways.</p></details>
+<div class="warning"><strong>Risk notice:</strong> DAMICOIN is an early-stage project. This site is informational and is not financial advice or an offer to sell or solicitation to buy any asset. The prototype is not publicly tradable. Crypto-assets may be volatile and users may lose all funds. Proposed utility and roadmap items may never be implemented.</div>
+</div></section>
+</main>
+<footer><div class="wrap foot"><div class="footbrand"><img src="assets/damicoin-logo.png" alt=""><b>DAMICOIN</b><span>· DAMI</span></div><span>© <span id="year"></span> DAMICOIN Project · Prototype stage</span><a href="#top">Back to top ↑</a></div></footer>
+<script>
+const btn=document.getElementById('menu'), links=document.getElementById('navlinks');
+btn.addEventListener('click',()=>links.classList.toggle('open'));
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
