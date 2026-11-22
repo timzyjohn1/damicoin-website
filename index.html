@@ -125,5 +125,140 @@ btn.addEventListener('click',()=>links.classList.toggle('open'));
 links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
 document.getElementById('year').textContent=new Date().getFullYear();
 </script>
+  <!-- DAMICOIN COMMUNITY SECTION -->
+<section class="community-section" id="community">
+    <div class="community-container">
+
+        <span class="community-tag">JOIN THE MOVEMENT</span>
+
+        <h2>Be Part of the <span>DAMICOIN</span> Community</h2>
+
+        <p>
+            Join our growing community, share your ideas,
+            follow development updates and help shape the
+            future of the DAMICOIN ecosystem.
+        </p>
+
+        <div class="community-buttons">
+
+            <a href="https://t.me/DAMICOINCommunity"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="community-btn telegram-btn">
+                ✈ Join Our Telegram
+            </a>
+
+            <a href="https://x.com/DAMICOIN_Offici"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="community-btn x-btn">
+                𝕏 Follow Us on X
+            </a>
+
+        </div>
+
+        <div class="community-footer">
+            <span>🪙 DAMICOIN ($DAMI)</span>
+            <p>One Community. One Vision. Building Together.</p>
+        </div>
+
+    </div>
+</section>
+
+<style>
+.community-section {
+    background: #080808;
+    padding: 85px 20px;
+    text-align: center;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.community-container {
+    max-width: 750px;
+    margin: auto;
+    padding: 45px 25px;
+    border: 1px solid #b58b35;
+    border-radius: 18px;
+    background: linear-gradient(145deg, #171717, #090909);
+}
+
+.community-tag {
+    color: #d6ad55;
+    letter-spacing: 3px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.community-section h2 {
+    font-size: 34px;
+    margin: 20px 0;
+}
+
+.community-section h2 span {
+    color: #d6ad55;
+}
+
+.community-section p {
+    color: #bbb;
+    line-height: 1.8;
+}
+
+.community-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.community-btn {
+    padding: 15px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.telegram-btn {
+    background: #d6ad55;
+    color: #080808;
+}
+
+.x-btn {
+    background: #fff;
+    color: #080808;
+}
+
+.community-btn:hover {
+    transform: translateY(-4px);
+    opacity: 0.85;
+}
+
+.community-footer {
+    margin-top: 45px;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    color: #d6ad55;
+}
+
+.community-footer p {
+    font-size: 13px;
+}
+
+@media(max-width: 600px) {
+    .community-section h2 {
+        font-size: 26px;
+    }
+
+    .community-buttons {
+        flex-direction: column;
+    }
+
+    .community-btn {
+        display: block;
+    }
+}
+</style>
 </body>
 </html>
